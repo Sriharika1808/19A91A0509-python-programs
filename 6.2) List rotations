@@ -1,0 +1,25 @@
+"""
+6.2) Implement a Python script to rotate list of elements towards right up to given number of times. Example: Input: [23,34,9,45,19] and 2 (Hint: 2 indicates No. of times to rotate) Output: [45,19,23,34,9]
+"""
+n1=int(input("Enter no. Of elements:"))
+list_number=[]
+n=int(input("enter the no of rotations:"))
+#read list of values from user
+for i in range(n1):
+    num=int(input())
+    #append number to list data structure
+    list_number.append(num)
+print(list_number)
+list_number = (list_number[-n:] + list_number[:-n])
+print(list_number)
+
+#output
+Enter no. Of elements:5
+enter the no of rotations:2
+13
+16
+25
+9
+125
+[13, 16, 25, 9, 125]
+[9, 125, 13, 16, 25]
